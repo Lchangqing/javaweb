@@ -16,11 +16,11 @@
 </style>
 </head>
 <body>
-	<form  action="hello" method="POST">	
+	<form  action="register" method="POST">	
 	<div id="class1" >
 		用户:<input type="text" name="user"><br /><br />
 	    密码:<input	type="password" name="pass"><br /><br />
-	         <input type="submit"name="submit" value="登陆">
+	         <input type="submit"name="submit" value="注册">
 	</div>
 	</form>
 

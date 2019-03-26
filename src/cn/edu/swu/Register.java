@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class Login extends HttpServlet {
+public class Register extends HttpServlet {
 	/**
 	 * 
 	 */
@@ -28,32 +28,24 @@ public class Login extends HttpServlet {
 		String username = (String) request.getParameter("user");
 		String password = (String) request.getParameter("pass");
 		System.out.println(username);
+		System.out.println(password);
 
-		PrintWriter out = response.getWriter();
-		
 		try {
-			
+			//加载驱动类
 			Class.forName("com.mysql.jdbc.Driver");
 			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/demo01?useSSL=false&characterEncoding=utf8","root","123456");
-			 System.out.println("连接成功");
-			String sql="select * from userinfo where name=? and passwd=?";
+			System.out.println("进conn");
+			String sql="INSERT INTO userinfo(name,passwd,time) VALUES(?,?,NOW())";//?符号是占位符
 			ps=con.prepareStatement(sql);
+			System.out.println("43");
 			ps.setObject(1,username);
 			ps.setObject(2,password);
-			rs=ps.executeQuery();
-			 System.out.println("准备进入if");
-			while(true) {
-				System.out.println("49");
-			if(rs.next()) {
-  				   System.out.println("51");
-//					System.out.println(rs.getInt(1)+"----------"+rs.getString(2)+"-----------"+rs.getString(3));
-					System.out.println("进if");
-					request.getRequestDispatcher("/second.jsp").forward(request, response);
-					break;
-				}else {
-					System.out.println("进else");
-					request.getRequestDispatcher("/failed.jsp").forward(request, response);
-			}}
+			if(ps.executeUpdate()==1) {
+				System.out.println("46");
+				request.getRequestDispatcher("/registsuccess.jsp").forward(request, response);
+			}else {System.out.println("48");
+				request.getRequestDispatcher("/registfailed.jsp").forward(request, response);
+			}
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

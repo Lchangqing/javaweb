@@ -9,4 +9,12 @@
 	<servlet-name>helloservlet</servlet-name>
 	<url-pattern>/hello</url-pattern>
 </servlet-mapping>
+<servlet>
+        <servlet-name>helloregister</servlet-name>
+        <servlet-class>cn.edu.swu.Register</servlet-class>
+</servlet>
+<servlet-mapping>
+        <servlet-name>helloregister</servlet-name>
+        <url-pattern>/register</url-pattern>
+</servlet-mapping>
 </web-app>
