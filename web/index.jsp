@@ -16,13 +16,16 @@
 </style>
 </head>
 <body>
-	<form  action="hello" method="POST">	
-	<div id="class1" >
+<div id="class1">
+       <form  action="hello" method="POST">	
 		用户:<input type="text" name="user"><br /><br />
 	    密码:<input	type="password" name="pass"><br /><br />
 	         <input type="submit"name="submit" value="登陆">
-	</div>
 	</form>
-
+	<br />
+	<form  action="log.jsp" method="POST">	
+	         <input type="submit"name="submit" value="注册">
+	</form>
+</div>
 </body>
 </html>
