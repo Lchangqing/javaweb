@@ -23,6 +23,7 @@
 	         <input type="submit"name="submit" value="登陆">
 	</form>
 	<br />
+
 	<form  action="log.jsp" method="POST">	
 	         <input type="submit"name="submit" value="注册">
 	</form>
