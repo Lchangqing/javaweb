@@ -1,3 +1,4 @@
+<<<<<<< bdbf626bc0eafa51bdcfcf79839b24cdde4f9e00
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <web-app metadata-complete="true" version="4.0" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee">
 
@@ -18,3 +19,48 @@
         <url-pattern>/register</url-pattern>
 </servlet-mapping>
 </web-app>
+=======
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" metadata-complete="true" version="4.0">
+  <servlet>
+    <servlet-name>helloservlet</servlet-name>
+    <servlet-class>cn.edu.swu.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>helloservlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>helloregister</servlet-name>
+    <servlet-class>cn.edu.swu.Register</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>helloregister</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>ListStdentServlet</servlet-name>
+    <servlet-class>cn.edu.swu.ListStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListStdentServlet</servlet-name>
+    <url-pattern>/liststudent</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>DeletRecords</servlet-name>
+    <servlet-class>cn.edu.swu.DeletRecords</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeletRecords</servlet-name>
+    <url-pattern>/deletrecord</url-pattern>
+  </servlet-mapping>  
+      <servlet>
+    <servlet-name>Submit</servlet-name>
+    <servlet-class>cn.edu.swu.Submit</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Submit</servlet-name>
+    <url-pattern>/submit</url-pattern>
+  </servlet-mapping>  
+</web-app>
+>>>>>>> point of mvc

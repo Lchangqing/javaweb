@@ -25,6 +25,10 @@ public class Register extends HttpServlet {
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 response.setCharacterEncoding("UTF-8") ;
+<<<<<<< bdbf626bc0eafa51bdcfcf79839b24cdde4f9e00
+=======
+		 request.setCharacterEncoding("UTF-8") ;
+>>>>>>> point of mvc
 		String username = (String) request.getParameter("user");
 		String password = (String) request.getParameter("pass");
 		System.out.println(username);
