@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="demo" default="1_build">
 	<target name="init">
-		<property name="project.name" value="demo" />
+		<property name="project.name" value="demo2" />
 		<property name="jar.name" value="swu-javaweb-demo" />
 		<property name="src.dir" value="./src" />
 		<property name="web.dir" value="./web" />
@@ -23,7 +23,7 @@
 	<target name="compile"  depends="init">
 		<javac	srcdir="${src.dir}" 
 				destdir="${build.dir}" 
-				target="1.8" debug="true" encoding="UTF-8" includeantruntime="false">
+				target="1.8" debug="true" encoding="GBK" includeantruntime="false">
 			<classpath  refid="classpath" />
 			<include name="**/*.java" />
 		</javac>

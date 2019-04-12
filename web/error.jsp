@@ -40,7 +40,7 @@
 		<div class="login_m">
 			<div class="login_boder">
 				<div  id="inner">
-				<h1>输入的内容有误哦</h1>
+				<h1>页面出错</h1>
 				<button>返回页面</button>
 				</div>
 			</div>
