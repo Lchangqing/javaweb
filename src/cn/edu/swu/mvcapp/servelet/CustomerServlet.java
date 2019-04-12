@@ -76,7 +76,7 @@ public class CustomerServlet extends HttpServlet {
 		if(!oldName.equalsIgnoreCase(name)) {
 			long count=customerdao.getCountWithName(name);
 			if(count>0) {
-				request.setAttribute("message", "用户名"+name+"已经被占用，请重新选择");
+				request.setAttribute("message", "the username "+name+" is occupied,please try another one~~");
 				request.getRequestDispatcher("/updatecustomer.jsp").forward(request, response);
 				return;
 			}
