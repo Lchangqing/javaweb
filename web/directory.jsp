@@ -6,12 +6,16 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<style type="text/css">
+		body{
+			background:rgb(248,249,252);
+		}
 		a{
 			width: 150px;
 			text-decoration: none;
 			display: block;
 			font-family:"楷体";
 			margin: 100px auto;
+			font-size:20px;
 		}
 		</style>
 	</head>

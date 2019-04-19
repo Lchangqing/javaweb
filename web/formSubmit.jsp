@@ -7,6 +7,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+	<style type="text/css">
+		body{
+			background:rgb(248,249,252);
+		}
+	</style>
 </head>
 <body>
 

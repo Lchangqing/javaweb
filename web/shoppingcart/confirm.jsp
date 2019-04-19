@@ -6,6 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+	<style type="text/css">
+		body{
+			background:rgb(248,249,252);
+		}
+	</style>
 </head>
 <body style="position:relative">
 <div style="position:absolute;left:40%;top:50%">
@@ -15,19 +20,19 @@
  %>
  <table>
  	<tr>
- 		<td>顾客姓名</td>
+ 		<td>customer name:</td>
  		<td><%= customer.getName() %></td>
  	</tr>
  	<tr>
- 		<td>地址：</td>
+ 		<td>address：</td>
  		<td><%= customer.getAddress() %></td>
  	</tr>
  	<tr>
- 		<td>卡号</td>
+ 		<td>cardID:</td>
  		<td><%= customer.getCard() %></td>
  	</tr>
  	<tr>
- 		<td>卡的类型</td>
+ 		<td>cardtype:</td>
  		<td><%= customer.getCardType() %></td>
  	</tr>
  	<tr>

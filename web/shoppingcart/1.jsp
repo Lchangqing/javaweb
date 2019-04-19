@@ -1,10 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+	<style type="text/css">
+		body{
+			background:rgb(248,249,252);
+		}
+	</style>
 </head>
 <body style="position:relative">
 <div style="position:absolute;left:40%;top:50%">
@@ -12,8 +17,8 @@
 <form action="<%= request.getContextPath() %>/processstep1" method="post">
 	<table border="1" cellpadding="10" cellspacing="0" >
 		<tr>
-			<td>书名</td>
-			<td>购买</td>
+			<td>booname</td>
+			<td>purchase</td>
 		</tr>
 		<tr>
 			<td>Java</td>
