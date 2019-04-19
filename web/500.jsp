@@ -45,9 +45,9 @@
           <!-- 404 Error Text -->
           <div class="text-center">
             <div class="error mx-auto" data-text="500">500</div>
-            <p class="lead text-gray-800 mb-5">页面没找到</p>
-            <p class="text-gray-500 mb-0">矮油，出错啦</p>
-            <a href="index.html">&larr; 返回</a>
+            <p class="lead text-gray-800 mb-5">oh no~</p>
+            <p class="text-gray-500 mb-0">there seems to be some mistake here</p>
+            <a href="index.html">&larr; back</a>
           </div>
 
         </div>

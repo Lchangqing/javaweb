@@ -54,8 +54,18 @@
 									<%
 										}
 									%>
+									<%
+										Object msg2 = session.getAttribute("msg2");
+										if (msg2 != null) {
+									%>
+									<div class="card mb-2  ">
+										<div class="px-3 py-1 bg-gradient-primary text-white"><%= msg2 %></div>
+									</div>
+									<%
+										}
+									%>
 									
-									<form class="user" action="query.go" method="post" id="log">
+									<form class="user" action="<%= request.getContextPath() %>/query.go" method="post" id="log">
 										<div class="form-group">
 											<input type="text" name="name" class="form-control form-control-user"
 												id="exampleInputEmail" aria-describedby="emailHelp"
@@ -65,6 +75,11 @@
 											<input type="password" name="passwd" class="form-control form-control-user"
 												id="exampleInputPassword" placeholder="Password:123456">
 										</div>
+										<div class="form-group">
+											<input type="text" name="CHECK_CODE_PARAM_NAME" class="form-control form-control-user"
+												id="exampleInputPassword" placeholder="please enter the verification code">
+										</div>
+										<img alt="" src="<%= request.getContextPath() %>/validateColorServlet"> 
 										<div class="form-group">
 											<div class="custom-control custom-checkbox small">
 												<input type="checkbox" class="custom-control-input"

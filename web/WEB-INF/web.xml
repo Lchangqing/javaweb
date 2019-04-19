@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>javaweb</display-name>
+  <display-name>mvc_2</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -9,7 +9,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-    <servlet>
+  <servlet>
     <servlet-name>CustomerServlet</servlet-name>
     <servlet-class>cn.edu.swu.mvcapp.servelet.CustomerServlet</servlet-class>
   </servlet>
@@ -32,11 +32,57 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
   <error-page>
-  	<error-code>404</error-code>
-  	<location>/404.jsp</location>
+    <error-code>404</error-code>
+    <location>/404.jsp</location>
   </error-page>
-    <error-page>
-  	<error-code>500</error-code>
-  	<location>/500.jsp</location>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/500.jsp</location>
   </error-page>
+  <servlet>
+    <servlet-name>ProcessStepServlet</servlet-name>
+    <servlet-class>cn.edu.swu.mvcapp.servelet.ProcessStepServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProcessStepServlet</servlet-name>
+    <url-pattern>/processstep1</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ProcessStep2</servlet-name>
+    <servlet-class>cn.edu.swu.mvcapp.servelet.ProcessStep2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProcessStep2</servlet-name>
+    <url-pattern>/process/processstep2</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 关于解决表单重复提交问题 -->
+  <servlet>
+    <servlet-name>TokenServlet</servlet-name>
+    <servlet-class>cn.edu.swu.mvcapp.servelet.TokenServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TokenServlet</servlet-name>
+    <url-pattern>/tokenServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 关于产生验证码问题 -->
+  <servlet>
+    <servlet-name>CheckCodeServlet</servlet-name>
+    <servlet-class>cn.edu.swu.formIssue.CheckCodeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckCodeServlet</servlet-name>
+    <url-pattern>/checkCodeServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ValidateColorServlet</servlet-name>
+    <servlet-class>cn.edu.swu.mvcapp.servelet.ValidateColorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidateColorServlet</servlet-name>
+    <url-pattern>/validateColorServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

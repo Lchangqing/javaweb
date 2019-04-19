@@ -47,9 +47,9 @@
           <!-- 404 Error Text -->
           <div class="text-center">
             <div class="error mx-auto" data-text="404">404</div>
-            <p class="lead text-gray-800 mb-5">é¡µé¢æ²¡æ¾å°</p>
-            <p class="text-gray-500 mb-0">ç®æ²¹ï¼åºéå¦</p>
-            <a href="index.html">&larr; è¿å</a>
+            <p class="lead text-gray-800 mb-5">not found the page</p>
+            <p class="text-gray-500 mb-0">there seems to be some mistake here</p>
+            <a href="index.html">&larr; back</a>
           </div>
 
         </div>
