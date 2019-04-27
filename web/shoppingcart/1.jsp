@@ -1,4 +1,4 @@
-<%@page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +14,7 @@
 <body style="position:relative">
 <div style="position:absolute;left:40%;top:50%">
 <h4>step1:choose the book you want</h4>
-<form action="<%= request.getContextPath() %>/processstep1" method="post">
+<form action="<%=response.encodeURL(request.getContextPath()+"/processstep1") %>"method="post">
 	<table border="1" cellpadding="10" cellspacing="0" >
 		<tr>
 			<td>booname</td>

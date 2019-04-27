@@ -64,8 +64,8 @@
 									<%
 										}
 									%>
-									
-									<form class="user" action="<%= request.getContextPath() %>/query.go" method="post" id="log">
+									<% System.out.println("index.jsp:"+request.getSession().getId()); %>
+									<form class="user" action="<%= response.encodeURL(request.getContextPath()+"/query.go")%>" method="post" id="log">
 										<div class="form-group">
 											<input type="text" name="name" class="form-control form-control-user"
 												id="exampleInputEmail" aria-describedby="emailHelp"
@@ -79,7 +79,7 @@
 											<input type="text" name="CHECK_CODE_PARAM_NAME" class="form-control form-control-user"
 												id="exampleInputPassword" placeholder="please enter the verification code">
 										</div>
-										<img alt="" src="<%= request.getContextPath() %>/validateColorServlet"> 
+										<img alt="" src="<%= response.encodeURL(request.getContextPath()+"/validateColorServlet")%>"> 
 										<div class="form-group">
 											<div class="custom-control custom-checkbox small">
 												<input type="checkbox" class="custom-control-input"
@@ -93,7 +93,7 @@
 									</form>
 									<hr>
 									<div class="text-center">
-										<a class="small" href="register.jsp">Create an Account!</a>
+										<a class="small" href="<%= response.encodeURL(request.getContextPath()+"/register.jsp")%>">Create an Account!</a>
 									</div>
 								</div>
 							</div>

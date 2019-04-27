@@ -49,7 +49,7 @@
             <div class="error mx-auto" data-text="404">404</div>
             <p class="lead text-gray-800 mb-5">not found the page</p>
             <p class="text-gray-500 mb-0">there seems to be some mistake here</p>
-            <a href="index.html">&larr; back</a>
+            <a href="javascript:;" onclick="window.history.back()">&larr; back</a>
           </div>
 
         </div>

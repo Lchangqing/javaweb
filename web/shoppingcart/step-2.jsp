@@ -1,4 +1,4 @@
-<%@page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,7 @@
 <h4>
 step2：please input the message of  address and card information
 </h4>
-<form action="<%= request.getContextPath()%>/process/processstep2" method="post">
+<form action="<%=response.encodeURL(request.getContextPath()+"/process/processstep2") %>" method="post">
 <table cellpadding="10" cellspacing="0" boder="1">
 		<tr>
 			<td colspan="2">send information</td>

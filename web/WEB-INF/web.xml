@@ -9,6 +9,22 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <!-- 用户信息放入到Session中的键的名字 -->	
+  <context-param>
+  	<param-name>userSessionKey</param-name>
+  	<param-value>USERSESSIONKEY</param-value>	
+  </context-param>
+
+  <context-param>
+  	<param-name>rediretPage</param-name>
+  	<param-value>/index.jsp</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>uncheckedUrls</param-name>
+  	<param-value>/404.jsp,/500.jsp,register.jsp,/index.jsp</param-value>
+  </context-param>
+ 
+
   <servlet>
     <servlet-name>CustomerServlet</servlet-name>
     <servlet-class>cn.edu.swu.mvcapp.servelet.CustomerServlet</servlet-class>
@@ -16,14 +32,17 @@
   <servlet-mapping>
     <servlet-name>CustomerServlet</servlet-name>
     <url-pattern>*.do</url-pattern>
+    <load-on-startup>1 </load-on-startup>
   </servlet-mapping>
   <servlet>
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>cn.edu.swu.mvcapp.servelet.Login</servlet-class>
-  </servlet>
+    <load-on-startup>1 </load-on-startup>  
+</servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>*.go</url-pattern>
+    <load-on-startup>1 </load-on-startup>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -85,4 +104,15 @@
     <servlet-name>ValidateColorServlet</servlet-name>
     <url-pattern>/validateColorServlet</url-pattern>
   </servlet-mapping>
+  <!-- 过滤器 -->
+  <filter>
+  	<filter-name>LoginFilter</filter-name>
+  	<filter-class>cn.edu.swu.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>LoginFilter</filter-name>
+  	<url-pattern>*.jsp</url-pattern>
+  	<dispatcher>REQUEST</dispatcher>
+  	<dispatcher>FORWARD</dispatcher>
+  </filter-mapping>
 </web-app>

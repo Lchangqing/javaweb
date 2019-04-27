@@ -11,5 +11,6 @@
 <a href="query.do">query</a>
 <a href="delete.do">delete</a>
 <a href="edit.do">delete</a>
+<a href="500.jsp">500</a>
 </body>
 </html>

@@ -21,7 +21,7 @@
 	--%>
 	<div style="text-align:center; margin-top:60px">
 	<h2> testing about preventing multiple submission</h2>
-	<form action="<%= request.getContextPath() %>/tokenServlet" method="post">
+	<form action="<%= response.encodeURL(request.getContextPath()+"/tokenServlet")%>" method="post">
 		  
 		<input type="hidden" name="COM.ATGUIGU.TOKEN_KEY" 
 			value="<%= TokenProcessor.getInstance().saveToken(request) %>"/>

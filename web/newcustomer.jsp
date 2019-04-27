@@ -56,7 +56,7 @@ body {
 			<%
 				}
 			%>
-			<form action="add.do" method="post">
+			<form action="<%=response.encodeURL(request.getContextPath()+"/add.do") %>" method="post">
 				<div class="row ">
 					<div class="col-md-1  col-md-offset-4">name</div>
 					<input class="col-md-3" type="text" name="name"
@@ -84,7 +84,6 @@ body {
 
 
 		</div>
-	</div>
 	</div>
 	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 	<script

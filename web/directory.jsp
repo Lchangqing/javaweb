@@ -10,7 +10,7 @@
 			background:rgb(248,249,252);
 		}
 		a{
-			width: 150px;
+			width: 200px;
 			text-decoration: none;
 			display: block;
 			font-family:"楷体";
@@ -20,10 +20,11 @@
 		</style>
 	</head>
 	<body>
+	<% System.out.println("directory:"+request.getSession().getId()); %>
 		<div class="box1" >
-		<a href="<%= request.getContextPath()%>/operate.jsp">模糊查询</a>			
-		<a href="<%= request.getContextPath()%>/shoppingcart/1.jsp">简易购物车</a>			
-		<a href="<%= request.getContextPath()%>/formSubmit.jsp">解决重复提交问题</a>			
+		<a href="<%= response.encodeURL(request.getContextPath()+"/operate.jsp")%>">模糊查询</a>			
+		<a href="<%= response.encodeURL(request.getContextPath()+"/shoppingcart/1.jsp")%>">简易购物车</a>			
+		<a href="<%= response.encodeURL(request.getContextPath()+"/formSubmit.jsp")%>">解决重复提交问题</a>			
 		<a></a>			
 		</div>
 	</body>

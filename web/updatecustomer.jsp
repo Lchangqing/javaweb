@@ -80,7 +80,7 @@
 		phone=request.getParameter("phone");
 	}
 %>
-				<form action="update.do" method="post">
+				<form action="<%=response.encodeURL(request.getContextPath()+"/update.do") %>" method="post">
 					<input type="hidden" name="id" value="<%= id %>" />
 					<input type="hidden" name="oldName" value="<%= oldName %>" />
 					<div class="row ">

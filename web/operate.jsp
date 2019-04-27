@@ -60,7 +60,7 @@ body {
 		<div class="container">
 			<br />
 			<br />
-			<form action="query.do" method="post">
+			<form action="<%=response.encodeURL(request.getContextPath()+"/query.do") %>" method="post">
 				<div class="row ">
 					<div class="col-md-1  col-md-offset-4">name</div>
 					<input class="col-md-3" type="text" name="name" />
@@ -79,7 +79,7 @@ body {
 				<br /> 
 					<input type="submit" class="col-md-2 col-md-offset-6" value="query" />
 				 <br /> <br />
-				 <a href="newcustomer.jsp " class="col-md-2 col-md-offset-6  active"
+				 <a href="<%=response.encodeURL(request.getContextPath()+"/newcustomer.jsp ") %>" class="col-md-2 col-md-offset-6  active"
 					style="height: 1.8em; text-align: center;"> add new customer </a>
 			</form>
 			<br />
@@ -113,13 +113,13 @@ body {
 								<td><%= customer.getName() %></td>
 								<td><%= customer.getAddress() %></td>
 								<td><%= customer.getPhone() %></td>
-								<td><a href="edit.do?id=<%= customer.getId()%>"> update</a>
-									<a href="delete.do?id=<%= customer.getId() %>" class="delete">
+								<td><a href="<%=response.encodeURL(request.getContextPath()+"/edit.do?id="+customer.getId())%>"> update</a>
+									<a href="<%=response.encodeURL(request.getContextPath()+"/edit.do?id="+customer.getId())%>" class="delete">
 									delete</a>
 								</td>
 							</tr>
 							<% 			}}else{%>
-											<h3 style="padding-left:23em;">there is no record that matches your query</h3>
+											<h3 style="padding-left:23em" >there is no record that matches your query</h3>
 										<% }
 							%>
 						</tbody>

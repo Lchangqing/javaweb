@@ -37,7 +37,7 @@
 							<div class="text-center">
 								<h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
 							</div>
-							<form class="user" action="save.go" method="post" id="register">
+							<form class="user" action="<%= response.encodeURL(request.getContextPath()+"/save.go")%>" method="post" id="register">
 							
 							   <% 
 										Object msg = request.getAttribute("message");
