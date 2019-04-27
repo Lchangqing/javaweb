@@ -71,6 +71,7 @@ private void query(HttpServletRequest request, HttpServletResponse response) thr
 	}else {
 	if(lenth==1) {
 		System.out.println("----------69");
+		request.getSession().setAttribute(request.getServletContext().getInitParameter("userSessionKey"), request.getSession().getId());
 		response.sendRedirect("directory.jsp");
 	}else {System.out.println("----------72");
 	    request.getSession().setAttribute("msg2",null);
