@@ -115,4 +115,17 @@
   	<dispatcher>REQUEST</dispatcher>
   	<dispatcher>FORWARD</dispatcher>
   </filter-mapping>
+  <listener>
+    <listener-class>cn.edu.swu.fileupload.app.listener.FileUploadAppListener</listener-class>
+  </listener>
+  
+ 
+  <servlet>
+    <servlet-name>FileUploadServlet</servlet-name>
+    <servlet-class>cn.edu.swu.mvcapp.servelet.FileUploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FileUploadServlet</servlet-name>
+    <url-pattern>/FileUploadServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

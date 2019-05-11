@@ -22,9 +22,9 @@
 	<body>
 	<% System.out.println("directory:"+request.getSession().getId()); %>
 		<div class="box1" >
+		<a href="<%= response.encodeURL(request.getContextPath()+"/app/upload.jsp")%>">文件上传功能</a>	
 		<a href="<%= response.encodeURL(request.getContextPath()+"/operate.jsp")%>">模糊查询</a>			
-		<a href="<%= response.encodeURL(request.getContextPath()+"/shoppingcart/1.jsp")%>">简易购物车</a>			
-		<a href="<%= response.encodeURL(request.getContextPath()+"/formSubmit.jsp")%>">解决重复提交问题</a>			
+		<a href="<%= response.encodeURL(request.getContextPath()+"/shoppingcart/1.jsp")%>">简易购物车</a>						
 		<a></a>			
 		</div>
 	</body>
